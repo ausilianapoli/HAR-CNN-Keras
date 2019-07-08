@@ -77,7 +77,7 @@ def segment_signal(data, window_size = 90):
 ''' Main Code '''
 # # # # # # # # #   reading the data   # # # # # # # # # # 
 # Path of file #
-dataset = readData('/home/shahnawaz/Documents/HAR/actitracker_raw.txt')
+dataset = readData('./output.txt')
 # plotting a subset of the data to visualize
 for activity in np.unique(dataset['activity']):
     subset = dataset[dataset['activity']==activity][:180]

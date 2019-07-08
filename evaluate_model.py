@@ -62,7 +62,7 @@ print('Baseline Error: %.2f%%' %(100-score[1]*100))
 
 '''
 # defining the class labels
-labels = ['Downstairs','Jogging','Sitting','Standing','Upstairs','Walking']
+labels = ['Downstairs','Upstairs','Walking']
 # predicting the classes
 predictions = model.predict(test_x,verbose=2)
 # getting the class predicted and class in ground truth for creation of confusion matrix
