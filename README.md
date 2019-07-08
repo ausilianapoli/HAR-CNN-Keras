@@ -13,7 +13,7 @@ The repository contains following files.
 
 ### Tools Required
 
-The code in this repository is created using Python 3.6. Furthermore, following libraries are required to run the code provided in this repository:
+The code in this repository is created using Python 3.*. Furthermore, following libraries are required to run the code provided in this repository:
 * `Keras 2.*`
 * `Numpy`
 * `Matplotlib`
