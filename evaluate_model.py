@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct  4 17:07:51 2017
-This script is written to evaluate a pretrained model saved as  model.h5 using 'testData.npy' 
+This script is written to evaluate a pretrained model saved as  model.h5 using 'testData.npy'
 and 'groundTruth.npy'. This script reports the error as the cross entropy loss in percentage
-and also generated a png file for the confusion matrix. 
+and also generated a png file for the confusion matrix.
 @author:Muhammad Shahnawaz
 """
 # importing the dependencies
@@ -34,7 +34,7 @@ def plot_cm(cM, labels,title):
     plt.xticks(range(len(labels)),labels,rotation = 60)
     plt.yticks(range(len(labels)),labels)
     # number of occurences in the boxes
-    width, height = cM.shape 
+    width, height = cM.shape
     print('Accuracy for each class is given below.')
     for predicted in range(width):
         for real in range(height):
@@ -71,10 +71,7 @@ groundTruthClass = np.zeros((groundTruth.shape[0]))
 for instance in range (groundTruth.shape[0]):
     predictedClass[instance] = np.argmax(predictions[instance,:])
     groundTruthClass[instance] = np.argmax(groundTruth[instance,:])
-# obtaining a confusion matrix  
+# obtaining a confusion matrix
 cm = metrics.confusion_matrix(groundTruthClass,predictedClass)
 # plotting the confusion matrix
 plot_cm(cm, labels,'Confusion Matrix')
-
-
-
