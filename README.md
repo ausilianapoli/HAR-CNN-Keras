@@ -12,7 +12,6 @@ The project is made of following files:
 * `groundTruth.npy`, Python data file containing the ground truth values for the corresponding outputs for for the test data;
 * `README.md`.
 
-
 ### Tools Required
 The code in this project is created using Python 3.\*. 
 Following libraries are required to run the code provided in this repository:
@@ -48,7 +47,7 @@ A simple CNN based neural network is created using the topology in `HAR.py`; the
 5. first fully connected layer with 256 outputs;
 6. second fully connected layer 128 outputs;
 7. softmax layer for the classification;
-8. compiling the model to generate a model with:
+8. compiling the model to generate a model with parameters:
 	* Adam optimizer;
 	* learning rate equals to 0.001;
 	* decay equals to 1e-6;
@@ -58,5 +57,10 @@ A simple CNN based neural network is created using the topology in `HAR.py`; the
 The dataset is splitted into two subgroups, `trainData` and `testData` with the ratio of 80% and 20% respectively. The training data is further split into training and validation data with the same distribution.   
 The HAR model created in `HAR.py` is then trained on the training data and validated on the validation data. To evaluate the performance of this network, we write a script `evaluate_model.py`. This script uses the 20% of random samples in the dataset and tests the pretrained CNN model `model.h5`. Furhtermore, this script reports the percentage of the wrong predictions as error and creates a confusion matrix. 
 
-
 ### Validation on Desktop
+Because of the built CNN must be tailored for IoT module, it needs to use the X-CUBE-AI in order to validate it on desktop that is calculated the requested flash RAM by the model and eventually compress the model.  
+The output `model.h5` - producted by our CNN - requests:
+* 0000 kB of flash RAM without compression (the requested RAM is greater than available RAM);
+* 0000 kB of flash RAM with compression setted to 4;
+* 0000 kB of flash RAM with compressione setted to 8.
+It is chosen the compression setted to 4.
