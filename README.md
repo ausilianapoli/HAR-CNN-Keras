@@ -41,7 +41,19 @@ The number of samples is 0000 divided into:
 
 ### Training and Evaluation
 A simple CNN based neural network is created using the topology in `HAR.py`; the model used is `Sequential` and the topology of the CNN is as follows:
-* 
+1. convolutionial layer with 32 filters and 5 by 5 kernal size, using the rectifier as the activation function;
+2. maxpooling layer;
+3. dropout layer for the regularization and avoiding over fitting;
+4. flattening the output in order to apply the fully connected layer;
+5. first fully connected layer with 256 outputs;
+6. second fully connected layer 128 outputs;
+7. softmax layer for the classification;
+8. compiling the model to generate a model with:
+	* Adam optimizer;
+	* learning rate equals to 0.001;
+	* decay equals to 1e-6;
+	* categorical cross entropy as loss function;
+	* accuracy as metrics.
 
 The dataset is splitted into two subgroups, `trainData` and `testData` with the ratio of 80% and 20% respectively. The training data is further split into training and validation data with the same distribution.   
 The HAR model created in `HAR.py` is then trained on the training data and validated on the validation data. To evaluate the performance of this network, we write a script `evaluate_model.py`. This script uses the 20% of random samples in the dataset and tests the pretrained CNN model `model.h5`. Furhtermore, this script reports the percentage of the wrong predictions as error and creates a confusion matrix. 
