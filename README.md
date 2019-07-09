@@ -29,10 +29,11 @@ Furhtermore, they are need STMicroelectronics software's such as:
 
 
 ### Dataset
-In these experiments we used a dataset built collecting data of accelerometer using the STEVAL-STLKT01V1 development kit and measuring in \pm{mg}. These activities include:
+In these experiments we used a dataset built collecting data of accelerometer using the STEVAL-STLKT01V1 development kit and measuring in *mg*. These activities include:
 * Downstairs;
 * Upstairs;
 * Walking.
+
 The number of samples is 0000 divided into:
 * 0000 for Downstairs;
 * 0000 for Upstairs;
