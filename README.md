@@ -20,8 +20,8 @@ Following libraries are required to run the code provided in this repository:
 * `Numpy`
 * `Matplotlib`
 * `Pandas`
-* `Sklearn`
-The accelerometer used for data acquisition is that of the [`STEVAL-STLKT01V1`](https://www.st.com/en/evaluation-tools/steval-stlkt01v1.html) that is is a comprehensive development kit designed to support and expand the capabilities of the SensorTile and comes with a set of cradle boards enabling hardware scalability.
+* `Sklearn`  
+The accelerometer used for data acquisition is that of the [`STEVAL-STLKT01V1`](https://www.st.com/en/evaluation-tools/steval-stlkt01v1.html) that is is a comprehensive development kit designed to support and expand the capabilities of the SensorTile and comes with a set of cradle boards enabling hardware scalability.  
 Furhtermore, they are need STMicroelectronics software's such as:
 * [STM32CubeMX] (https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-configurators-and-code-generators/stm32cubemx.html);
 * [X-CUBE-AI](https://www.st.com/en/embedded-software/x-cube-ai.html), expansion for STM32CubeMX.
