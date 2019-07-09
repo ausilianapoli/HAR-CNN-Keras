@@ -63,4 +63,5 @@ The output `model.h5` - producted by our CNN - requests:
 * 0000 kB of flash RAM without compression (the requested RAM is greater than available RAM);
 * 0000 kB of flash RAM with compression setted to 4;
 * 0000 kB of flash RAM with compressione setted to 8.
+
 It is chosen the compression setted to 4.
