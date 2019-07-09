@@ -29,15 +29,21 @@ Furhtermore, they are need STMicroelectronics software's such as:
 
 
 ### Dataset
-In these experiments we used a dataset built collecting data of accelerometer using the STEVAL-STLKT01V1 development kit. These activities include:
+In these experiments we used a dataset built collecting data of accelerometer using the STEVAL-STLKT01V1 development kit and measuring in \pm{mg}. These activities include:
 * Downstairs;
 * Upstairs;
 * Walking.
-
+The number of samples is 0000 divided into:
+* 0000 for Downstairs;
+* 0000 for Upstairs;
+* 0000 for Walking.
 
 ### Training and Evaluation
-A simple CNN based neural network is created using the topology in `HAR.py`. The dataset is splitted into two subgroups, `trainData` and `testData` with the ratio of `80` and `20`% respectively. The training data is further split into training and validation data with the same distribution.  
-The HAR model created in `HAR.py` is then trained on the training data and validated on the validataion data. To evaluate the performance of this network, we write a script "evaluate_model.py". This script uses the `20%` of random samples in the dataset and tests the pretrained CNN model `model.h5`. Furhtermore, this script reports the percentage of the wrong predictions as error and creates a confusion matrix. 
+A simple CNN based neural network is created using the topology in `HAR.py`; the model used is `Sequential` and the topology of the CNN is as follows:
+* 
+
+The dataset is splitted into two subgroups, `trainData` and `testData` with the ratio of 80% and 20% respectively. The training data is further split into training and validation data with the same distribution.   
+The HAR model created in `HAR.py` is then trained on the training data and validated on the validation data. To evaluate the performance of this network, we write a script `evaluate_model.py`. This script uses the 20% of random samples in the dataset and tests the pretrained CNN model `model.h5`. Furhtermore, this script reports the percentage of the wrong predictions as error and creates a confusion matrix. 
 
 
-### 
+### Validation on Desktop
