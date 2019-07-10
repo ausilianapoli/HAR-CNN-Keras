@@ -102,7 +102,7 @@ numNueronsFCL2 = 128
 # split ratio for test and validation
 trainSplitRatio = 0.8
 # number of epochs
-Epochs = 10
+Epochs = 25
 # batchsize
 batchSize = 10
 # number of total clases
@@ -143,7 +143,7 @@ def cnnModel():
 model = cnnModel()
 for layer in model.layers:
     print(layer.name)
-model.fit(trainX,trainY, validation_split=1-trainSplitRatio,epochs=25,batch_size=batchSize,verbose=2)
+model.fit(trainX,trainY, validation_split=1-trainSplitRatio,epochs=Epochs,batch_size=batchSize,verbose=2)
 score = model.evaluate(testX,testY,verbose=2)
 print('Baseline Error: %.2f%%' %(100-score[1]*100))
 model.save('model.h5')
