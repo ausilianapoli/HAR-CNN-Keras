@@ -57,7 +57,7 @@ A simple CNN based neural network is created using the topology in `HAR.py`; the
 The number of epochs is 10 and the batch size is 100.  
 
 The dataset is splitted into two subgroups, `trainData` and `testData` with the ratio of 80% and 20% respectively. The training data is further split into training and validation data with the same distribution.   
-The HAR model created in `HAR.py` is then trained on the training data and validated on the validation data. To evaluate the performance of this network, we write a script `evaluate_model.py`. This script uses the 20% of random samples in the dataset and tests the pretrained CNN model `model.h5`. Furhtermore, this script reports the percentage of the wrong predictions as error and creates a confusion matrix. 
+The HAR model created in `HAR.py` is then trained on the training data and validated on the validation data. To evaluate the performance of this network, we write a script `evaluate_model.py`. This script uses the 20% of random samples in the dataset and tests the pretrained CNN model `model.h5`. Furthermore, this script reports the percentage of the wrong predictions as error and creates a confusion matrix. 
 
 ### Validation on Desktop
 Because of the built CNN must be tailored for IoT module, it needs to use the X-CUBE-AI in order to validate it on desktop that is calculated the requested flash RAM by the model and eventually compress the model.  
