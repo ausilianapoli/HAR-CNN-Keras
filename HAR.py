@@ -30,7 +30,7 @@ plt.style.use('ggplot')
 def readData(filePath):
     # attributes of the dataset
     columnNames = ['user_id','activity','timestamp','x-axis','y-axis','z-axis']
-    data = pd.read_csv(filePath,header = None, names=columnNames,na_values=';')
+    data = pd.read_csv(filePath, header=None, names=columnNames,na_values=';')
     return data
 # defining a function for feature normalization
 # (feature - mean)/stdiv
@@ -143,7 +143,7 @@ def cnnModel():
 model = cnnModel()
 for layer in model.layers:
     print(layer.name)
-model.fit(trainX,trainY, validation_split=1-trainSplitRatio,epochs=10,batch_size=batchSize,verbose=2)
+model.fit(trainX,trainY, validation_split=1-trainSplitRatio,epochs=25,batch_size=batchSize,verbose=2)
 score = model.evaluate(testX,testY,verbose=2)
 print('Baseline Error: %.2f%%' %(100-score[1]*100))
 model.save('model.h5')
