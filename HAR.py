@@ -30,7 +30,7 @@ plt.style.use('ggplot')
 def readData(filePath):
     # attributes of the dataset
     columnNames = ['user_id','activity','timestamp','x-axis','y-axis','z-axis']
-    data = pd.read_csv(filePath,header = None, names=columnNames,na_values=';')
+    data = pd.read_csv(filePath, skiprows=1, names=columnNames,na_values=';')
     return data
 # defining a function for feature normalization
 # (feature - mean)/stdiv
