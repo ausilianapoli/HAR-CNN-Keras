@@ -62,8 +62,8 @@ The HAR model created in `HAR.py` is then trained on the training data and valid
 ### Validation on Desktop
 Because of the built CNN must be tailored for IoT module, it needs to use the X-CUBE-AI in order to validate it on desktop that is calculated the requested flash RAM by the model and eventually compress the model.  
 The output `model.h5` - producted by our CNN - requests:
-* 0000 kB of flash RAM without compression (the requested RAM is greater than available RAM);
-* 0000 kB of flash RAM with compression setted to 4;
-* 0000 kB of flash RAM with compressione setted to 8.
+* 2.82 MB of flash RAM without compression (the requested RAM is greater than available RAM);
+* 774.01 kB of flash RAM with compression setted to 4;
+* 365.14 kB of flash RAM with compressione setted to 8.
 
-It is chosen the compression setted to 4.
+It is chosen the compression setted to 4 and it is validated on desktop successfully.
